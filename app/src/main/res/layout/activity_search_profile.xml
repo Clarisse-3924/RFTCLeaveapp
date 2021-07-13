@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2B547E">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBarViewProfile"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="#2E8B57"
+            app:titleTextColor="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/iconBackSearchFriend"
+                    android:src="@drawable/back"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Profile"
+                    android:textSize="20sp"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/white"
+                    android:layout_toEndOf="@+id/iconBackSearchFriend"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="15dp"
+                    android:layout_toRightOf="@+id/iconBackSearchFriend" />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    app:civ_border_width="3dp"
+                    app:civ_border_color="#FFFFFFFF"
+                    android:id="@+id/profile_search"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginStart="300dp"
+                    android:layout_alignParentBottom="true"
+                    android:elevation="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/avatar_default"
+                    android:layout_marginLeft="20dp" />
+                <TextView
+                    android:id="@+id/textViewFullNameSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_below="@+id/profile_search"
+                    android:textColor="#fff"
+                    android:layout_marginLeft="250dp"
+                    android:textColorHint="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                   />
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/profile_layout_search"
+            android:layout_below="@+id/toolBarViewProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rftc1"
+            android:elevation="4dp"
+            android:paddingBottom="24dp">
+        </RelativeLayout>
+
+        <TableLayout
+            android:id="@+id/tableLayoutSearchProfile"
+            android:layout_below="@+id/profile_layout_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:background="#2B547E"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/labelGenderSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_table_row_search_profile"
+                android:layout_marginBottom="@dimen/margin_table_row_search_profile"
+                android:text="@string/gender"
+                android:textStyle="bold"
+                android:paddingLeft="@dimen/padding_left_table_row"
+                android:textSize="@dimen/text_size_fragment_personal"
+                android:layout_span="1"
+                android:background="@drawable/rounded_borders"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/textViewGenderSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_fragment_personal"
+                android:layout_marginTop="@dimen/margin_table_row_search_profile"
+                android:background="@drawable/rounded_borders"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:layout_marginBottom="@dimen/margin_table_row_search_profile"
+                android:layout_span="7"/>
+        </TableRow>
+
+        <View
+            android:layout_width ="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/rounded_borders"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:layout_marginBottom="2dp"
+            android:elevation="2dp"/>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/labelPhoneNumberSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_table_row_search_profile"
+                    android:layout_marginBottom="@dimen/margin_table_row_search_profile"
+                    android:text="@string/phoneNumber"
+                    android:textStyle="bold"
+                    android:background="@drawable/rounded_borders"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:paddingLeft="@dimen/padding_left_table_row"
+                    android:textSize="@dimen/text_size_fragment_personal"
+                    android:layout_span="1"/>
+
+                <TextView
+                    android:id="@+id/textViewPhoneNumberSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_fragment_personal"
+                    android:background="@drawable/rounded_borders"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/margin_table_row_search_profile"
+                    android:layout_marginBottom="@dimen/margin_table_row_search_profile"
+                    android:layout_span="7"
+                    />
+            </TableRow>
+
+            <View android:background="@color/gray"
+                android:layout_width ="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:elevation="2dp"/>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/labelDateofBirthSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_table_row_search_profile"
+                    android:layout_marginBottom="@dimen/margin_table_row_search_profile"
+                    android:text="@string/dateOfBirth"
+                    android:background="@drawable/rounded_borders"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:paddingLeft="@dimen/padding_left_table_row"
+                    android:textSize="@dimen/text_size_fragment_personal"
+                    android:layout_span="1"/>
+
+                <TextView
+                    android:id="@+id/textViewDateofBirthSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_table_row_search_profile"
+                    android:background="@drawable/rounded_borders"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="@dimen/margin_table_row_search_profile"
+                    android:textSize="@dimen/text_size_fragment_personal"
+                    android:layout_span="7" />
+            </TableRow>
+
+            <View
+                android:layout_width ="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/rounded_borders"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:layout_marginBottom="2dp"
+                android:elevation="2dp"/>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/labelAddressSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_table_row_search_profile"
+                    android:layout_marginBottom="@dimen/margin_table_row_search_profile"
+                    android:text="@string/address"
+                    android:textStyle="bold"
+                    android:background="@drawable/rounded_borders"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:paddingLeft="@dimen/padding_left_table_row"
+                    android:textSize="@dimen/text_size_fragment_personal"
+                    android:layout_span="1"/>
+
+                <TextView
+                    android:id="@+id/textViewAddressSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_fragment_personal"
+                    android:layout_marginTop="@dimen/margin_table_row_search_profile"
+                    android:background="@drawable/rounded_borders"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="@dimen/margin_table_row_search_profile"
+                    android:layout_span="7" />
+            </TableRow>
+
+            <View
+                android:layout_width ="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/rounded_borders"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:layout_marginBottom="2dp"
+                android:elevation="2dp"/>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/labelDescriptionSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_table_row_search_profile"
+                    android:layout_marginBottom="@dimen/margin_table_row_search_profile"
+                    android:text="@string/description"
+                    android:textStyle="bold"
+                    android:paddingStart="@dimen/padding_left_table_row"
+                    android:background="@drawable/rounded_borders"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_fragment_personal"
+                    android:layout_span="1"
+                    android:paddingLeft="@dimen/padding_left_table_row" />
+
+                <TextView
+                    android:id="@+id/textViewDescriptionSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_fragment_personal"
+                    android:background="@drawable/rounded_borders"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/margin_table_row_search_profile"
+                    android:layout_marginBottom="@dimen/margin_table_row_search_profile"
+                    android:layout_span="7" />
+            </TableRow>
+
+            <View
+                android:layout_width ="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="2dp"
+                android:background="#2B547E"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:layout_marginBottom="2dp"
+                android:elevation="2dp"/>
+
+        </TableLayout>
+
+    </RelativeLayout>
+</ScrollView>

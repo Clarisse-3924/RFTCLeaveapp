@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1016797310240",
+    "project_id": "rftcleaveapp",
+    "storage_bucket": "rftcleaveapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1016797310240:android:784aa390b94192d7527b45",
+        "android_client_info": {
+          "package_name": "com.example.rftcleaveapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1016797310240-579bpdl5lit85533fkvjo9o0a6cmjlm6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCX-Bry_oee6e-iRNwb_bLn9dOq44tlv24"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1016797310240-579bpdl5lit85533fkvjo9o0a6cmjlm6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

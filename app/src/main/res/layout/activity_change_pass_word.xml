@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#2B547E">
+
+    <TextView
+        android:textSize="20dp"
+        android:layout_margin="50dp"
+        android:textStyle="bold"
+        android:text="Change Your Password"
+        android:id="@+id/tvnatural"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeChangePassWord"
+        android:layout_marginRight="10dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp">
+
+
+        <EditText android:id="@+id/editTextOldPassWord"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:paddingRight="40dp"
+            android:hint="Enter current password"
+            android:textColorHint="@color/white"
+            android:background="@drawable/rounded_borders"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <EditText android:id="@+id/editTextNewPassWord"
+            android:layout_below="@+id/editTextOldPassWord"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:paddingRight="40dp"
+            android:hint="Enter your new password"
+            android:textColorHint="@color/white"
+            android:background="@drawable/rounded_borders"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <EditText
+            android:id="@+id/editTextReNewPassWord"
+            android:layout_below="@+id/editTextNewPassWord"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:paddingRight="40dp"
+            android:hint="Enter a new password"
+            android:textColorHint="@color/white"
+            android:background="@drawable/rounded_borders"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/relativeChangePassWord"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/buttonEditPassWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_borders"
+            app:backgroundTint="#02E433"
+            android:layout_weight="3"
+            android:layout_marginLeft="30dp"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/buttonExitEditPassWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_borders"
+            app:backgroundTint="#02E433"
+            android:layout_weight="3"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="30dp"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+</RelativeLayout>

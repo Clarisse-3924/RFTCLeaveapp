@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:background="#2B547E"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/iconShakeHands"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WELCOME TO  RFTC LEAVE APP"
+        android:textColor="@color/white"
+        android:layout_marginLeft="30dp"
+        android:textStyle="bold|italic"
+        android:textSize="20dp"/>
+
+
+    <ImageView
+        android:id="@+id/iconslogan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:src="@drawable/rftc1" />
+
+
+</LinearLayout>

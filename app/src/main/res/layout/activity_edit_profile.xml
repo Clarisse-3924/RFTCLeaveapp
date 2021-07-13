@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#2B547E">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#2E8B57"
+        app:titleTextColor="@color/white">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/editTextFullName"
+        android:layout_below="@id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerVertical="true"
+        android:hint="@string/fullName"
+        android:inputType="text"
+        android:maxLength="50"
+        android:background="@drawable/rounded_borders"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:drawablePadding="5dp"
+        android:padding="10dp"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioGroupGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/editTextFullName"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="35dp"
+        android:background="@drawable/rounded_borders"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:layout_marginRight="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender"
+            android:textColorHint="@color/white"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_edit_profile"
+            android:drawablePadding="3dp"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/male"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_edit_profile"
+            android:textColorHint="@color/white"
+            android:buttonTint="@color/white"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/female"
+            android:textColor="@color/white"
+            android:buttonTint="@color/white"
+            android:textSize="@dimen/text_size_edit_profile"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTextAddress"
+        android:layout_below="@id/radioGroupGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_centerVertical="true"
+        android:hint="@string/address"
+        android:inputType="text"
+        android:background="@drawable/rounded_borders"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:maxLength="30"
+        android:drawablePadding="5dp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:id="@+id/editTextPhoneNumber"
+        android:layout_below="@id/editTextAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_centerVertical="true"
+        android:hint="@string/phoneNumber"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:drawablePadding="5dp"
+        android:background="@drawable/rounded_borders"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:id="@+id/editTextDateOfBirth"
+        android:layout_below="@id/editTextPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_centerVertical="true"
+        android:hint="@string/dateOfBirth"
+        android:inputType="date"
+        android:drawablePadding="5dp"
+        android:maxLength="10"
+        android:background="@drawable/rounded_borders"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_below="@id/editTextDateOfBirth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:lines="4"
+        android:inputType="text|textMultiLine"
+        android:hint="@string/description"
+        android:gravity="top"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_centerVertical="true"
+        android:drawablePadding="5dp"
+        android:maxLength="100"
+        android:background="@drawable/rounded_borders"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:padding="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/editTextDescription"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/buttonEditProfiles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:background="@drawable/rounded_borders"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:layout_weight="3"
+            app:backgroundTint="#02E433"
+            android:layout_marginLeft="30dp"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnBackToPersonalFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:background="@drawable/rounded_borders"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:layout_weight="3"
+            app:backgroundTint="#02E433"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="30dp"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+</RelativeLayout>
