@@ -47,7 +47,8 @@
                 android:layout_marginEnd="10dp"
                 android:background="@android:color/transparent"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="10dp" />
+                android:layout_marginRight="10dp"
+                android:visibility="gone"/>
 
         </RelativeLayout>
 
@@ -69,6 +70,7 @@
         android:layout_marginTop="40dp"
         android:textColorHint="@color/white"
         android:textColor="@color/white"
+        android:paddingLeft="60dp"
         android:hint="Enter Your Bus Station"
         android:background="@drawable/rounded_borders"
         android:layout_below="@+id/toolBarMessages"

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:weightSum="10"
     android:background="#2B547E"
@@ -22,9 +22,39 @@
     <ImageView
         android:id="@+id/iconslogan"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="100dp"
         android:layout_weight="4"
-        android:src="@drawable/rftc1" />
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rftc1"/>
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/iconslogan"
+        android:background="@drawable/rounded_borders"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:paddingLeft="@dimen/padding_left_right_20dp"
+        android:paddingRight="@dimen/padding_left_right_20dp"
+        android:layout_marginTop="60dp"
+        android:textAllCaps="false"
+        app:backgroundTint="#02E433"/>
+
+    <Button
+        android:id="@+id/buttonSwitchRegister"
+        android:layout_below="@id/buttonLogin"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        app:backgroundTint="#02E433"
+        android:background="@drawable/rounded_borders"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"/>
 
 
 </LinearLayout>

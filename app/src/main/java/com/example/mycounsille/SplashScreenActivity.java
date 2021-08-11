@@ -1,32 +1,27 @@
 package com.example.mycounsille;
-
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.scottyab.aescrypt.AESCrypt;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
-import java.security.GeneralSecurityException;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
     ImageView iconSlogan;
     TextView iconShakeHands;
     Animation fromTop, fromLeft, fromRight;
+    Button buttonLogin,buttonSwitchRegister;
 
     FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 
@@ -38,6 +33,8 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         iconShakeHands = (TextView)findViewById(R.id.iconShakeHands);
         iconSlogan = (ImageView)findViewById(R.id.iconslogan);
+        buttonSwitchRegister=findViewById(R.id.buttonSwitchRegister);
+        buttonLogin=findViewById(R.id.buttonLogin);
 
         fromTop = AnimationUtils.loadAnimation(SplashScreenActivity.this,R.animator.anim_from_top_to_bottom);
         fromLeft = AnimationUtils.loadAnimation(SplashScreenActivity.this,R.animator.anim_from_left_to_right);
@@ -46,63 +43,25 @@ public class SplashScreenActivity extends AppCompatActivity {
         iconShakeHands.setAnimation(fromTop);
         // iconLogo.setAnimation(fromLeft);
         iconSlogan.setAnimation(fromRight);
-
-        // Set thread set to 3 seconds for the welcome screen
-        Thread thread = new Thread(new Runnable() {
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                try{
-                    Thread.sleep(3000);
-                    if(readFile().equals("")) {
-                        Intent iLogin = new Intent(SplashScreenActivity.this, LoginActivity.class);
-                        startActivity(iLogin);
-                        overridePendingTransition(R.animator.animation_in,R.animator.animation_out);
-                        finish();
-                    }
-                    else
-                    {
-                        String messageAfterDecrypt = "";
-                        try {
-                            messageAfterDecrypt = AESCrypt.decrypt("123", readFile());
-                        }catch (GeneralSecurityException e){
-                            e.printStackTrace();
-                        }
-                        if(!messageAfterDecrypt.isEmpty()) {
-                            String[] fulluser = messageAfterDecrypt.split("[ ]");
-                            String email = fulluser[0].trim();
-                            String password = fulluser[1].trim();
-                            firebaseAuth.signInWithEmailAndPassword(email, password)
-                                    .addOnCompleteListener(SplashScreenActivity.this, new OnCompleteListener<AuthResult>() {
-                                        @Override
-                                        public void onComplete(@NonNull Task<AuthResult> task) {
-                                            if (!task.isSuccessful()) {
-                                                Intent iLogin = new Intent(SplashScreenActivity.this, LoginActivity.class);
-                                                startActivity(iLogin);
-                                                overridePendingTransition(R.animator.animation_in,R.animator.animation_out);
-                                                finish();
-                                            } else {
-                                                Intent intent = new Intent(SplashScreenActivity.this,
-                                                        MainActivity.class);
-                                                String uid = firebaseAuth.getCurrentUser().getUid();
-                                                Bundle bundle = new Bundle();
-                                                bundle.putString("UID", uid);
-                                                intent.putExtras(bundle);
-                                                startActivity(intent);
-                                                finish();
-                                            }
-                                        }
-                                    });
-                        }
-
-                    }
-                }
-                catch(Exception e) {
-                    e.printStackTrace();
-                }
+            public void onClick(View v) {
+                Intent intent = new Intent(SplashScreenActivity.this,LoginActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        buttonSwitchRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SplashScreenActivity.this,RegisterActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 
-        thread.start();
+        // Set thread set to 3 seconds for the welcome screen
+
     }
 
     private String readFile() {

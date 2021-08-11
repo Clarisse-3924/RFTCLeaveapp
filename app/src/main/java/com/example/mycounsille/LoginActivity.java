@@ -137,9 +137,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                if(txtUserName.getText().toString().equals("admin@gmail.com") &&
                        txtPassWord.getText().toString().equals("admin")) {
                   startActivity(new Intent(getApplicationContext(),Admin.class));
-                }else{
-                    Toast.makeText(getApplicationContext(), "Wrong Credentials",Toast.LENGTH_SHORT).show();
-                   }
+                }
+//               else{
+//                    Toast.makeText(getApplicationContext(), "Wrong Credentials",Toast.LENGTH_SHORT).show();
+//                   }
                 mAuthProgressDialog.show();
                 firebaseAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {

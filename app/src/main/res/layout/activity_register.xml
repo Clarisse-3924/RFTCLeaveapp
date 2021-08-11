@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:hint="@string/repassword"
+        android:hint="Confirm password"
         android:inputType="textPassword"
         android:maxLength="20"
         android:drawablePadding="5dp"
